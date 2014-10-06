@@ -18,3 +18,11 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 module.exports = app.toTree();
+
+var app = new EmberApp({
+  'foundation-sass': {
+    'modernizr': true, //includes modernizer
+    'fastclick': true, //includes fastclick
+    'foundationJs': 'all' //Includes the full foundation.js with all modules
+  }
+});

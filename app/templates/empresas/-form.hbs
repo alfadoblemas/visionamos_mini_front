@@ -1,0 +1,21 @@
+<form {{action 'save' on='submit'}}>
+
+ <h5> {{errorMessage}}</h5>
+ <div class="row">
+   <div class="large-6 columns"><label>Nombre</label>{{input value=nombre}}</div>
+   <div class="large-6 columns"><label>Nit</label>{{input value=nit}}</div>
+   <div class="large-6 columns"><label>Gerente</label>
+      {{input value=gerente}}</div>
+   <div class="large-6 columns"><label>Teléfono</label>
+      {{input value=telefono}}</div>
+   <div class="large-6 columns"><label>Dirección</label>
+      {{input value=direccion}}</div>
+   <div class="large-6 columns">
+      <input type='submit' value='save' class="tiny small button"/>
+      {{#link-to 'empresas.index' class="tiny small button"}}cancelar{{/link-to}}
+
+   </div>
+
+ </div>
+
+</form>

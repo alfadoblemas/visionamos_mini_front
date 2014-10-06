@@ -1,0 +1,39 @@
+<h1>Listado empresas {{length}}</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>id</td>
+      <td>nombre</td>
+      <td>nit</td>
+      <td>gerente</td>
+      <td>telefono</td>
+      <td>direccion</td>
+      <td>telefono</td>
+      <td colspan="4">accion</td>
+
+    </tr>
+
+  </thead>
+  <tbody>
+    {{#each}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{nombre}}</td>
+        <td>{{nit}}</td>
+        <td>{{gerente}}</td>
+        <td>{{telefono}}</td>
+        <td>{{direccion}}</td>
+        <td>{{telefono}}</td>
+        <td colspan="4">
+         <ul class="button-group">
+            <li>{{#link-to 'empresas.show' this  class="tiny small button"}} ver {{/link-to}}</li>
+            <li>{{#link-to 'empresas.edit' this class="tiny small button"}} editar {{/link-to}}</li>
+            <li><a href="#" {{ action 'delete' this }} class="tiny small button"> eliminar </a></li>
+          </ul>
+        </td>
+      </tr>
+      {{/each}}
+  </tbody>
+</table>
+{{#link-to 'empresas.new' class="tiny small button"}}Nuevo{{/link-to}}
